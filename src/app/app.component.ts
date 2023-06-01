@@ -1,15 +1,13 @@
-import { HttpClient } from '@angular/common/http';
+
 import { Component } from '@angular/core';
+import { GestorePostService } from './gestore-post.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  posts:{id:number, autore:string, testo:string, like:number, commenti:string[]}[] = [];
-  
-  constructor(private http:HttpClient){
 
-  }
+export class AppComponent {
+  constructor(public gestorePost:GestorePostService){}
 }

@@ -1,7 +1,13 @@
 <div>
-    <h1>{{autore}}</h1>
+    <h1 style="background-color: rgb(99, 99, 226); color: rgb(12, 229, 240); margin-top: 0;">Post {{id}}</h1>
+    <p><b>{{autore}}</b></p>
     <p>{{testo}}</p>
     <hr>
-    <button>{{like}} like</button>
+    <button (click)="gestorePost.addLike(id)">{{like}} like</button>
     <button>Aggiungi commento</button>
+    <br>
+    <div>
+        <app-commento *ngFor="let c of getCommenti()" [autore]="c.autore" [testo]="c.testo"></app-commento>
+    </div>
 </div>
+<br>

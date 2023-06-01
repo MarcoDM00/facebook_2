@@ -1,2 +1,6 @@
-<h1>Facebook-Like App</h1>
+<h1 style="text-align: center;">Facebook-Like App</h1>
+
+<app-new-post></app-new-post>
+
+<app-post *ngFor="let p of gestorePost.getPosts()" [id]="p.id" [autore]="p.autore" [testo]="p.testo" [like]="p.like"></app-post>
 

@@ -1,0 +1,10 @@
+<label for="autore">Autore: </label>
+<br>
+<input type="text" name="autore" [(ngModel)]="autore">
+<br>
+<label for="testo">Testo:</label>
+<br>
+<textarea name="testo" cols="50" rows="3" [(ngModel)]="testo"></textarea>
+<br>
+<button (click)="gestorePost.addPost(autore, testo); autore = ''; testo = '';">Aggiungi Post</button>
+<hr>
