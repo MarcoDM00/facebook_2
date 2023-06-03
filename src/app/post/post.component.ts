@@ -11,13 +11,7 @@ export class PostComponent {
   @Input() autore:string;
   @Input() testo:string;
   @Input() like:number;
+  @Input() commenti:{id:number,autore:string,testo:string,idPost:number}[];
 
   constructor(public gestorePost:GestorePostService){}
-
-  getCommenti() {
-    let x = this.gestorePost.getCommenti(this.id);
-    console.log("X: " + x);
-    console.log(this.gestorePost.getCommenti(this.id) + "\n");
-    return [];
-  }
 }

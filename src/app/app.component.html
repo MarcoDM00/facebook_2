@@ -2,5 +2,5 @@
 
 <app-new-post></app-new-post>
 
-<app-post *ngFor="let p of gestorePost.getPosts()" [id]="p.id" [autore]="p.autore" [testo]="p.testo" [like]="p.like"></app-post>
+<app-post *ngFor="let p of gestorePost.posts" [id]="p.id" [autore]="p.autore" [testo]="p.testo" [like]="p.like" [commenti]="p.commenti"></app-post>
 

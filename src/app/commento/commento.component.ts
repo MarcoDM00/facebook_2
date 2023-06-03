@@ -9,8 +9,5 @@ export class CommentoComponent {
   @Input() autore:string;
   @Input() testo:string;
 
-  constructor() {
-    alert("Ciao");
-    console.log(this.autore);
-  }
+  constructor() {}
 }

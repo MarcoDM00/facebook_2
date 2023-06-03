@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class GestorePostService {
-  private posts:Post[] = [];
+  posts:Post[] = [];
 
   constructor(private http:HttpClient) {
     this.http.get("https://my-json-server.typicode.com/PaoloCarugati/facebook/db").subscribe(
@@ -35,23 +35,6 @@ export class GestorePostService {
         console.log(err);
       }
     );
-  }
-
-  getPosts() {
-    return this.posts;
-  }
-
-  getCommenti(idPost:number) {
-    this.posts.forEach(x => {
-      if (x.id == idPost) {
-        console.log("IdPost: " + idPost);
-        console.log("length: " + x.commenti.length);
-        console.log("Array: " + x.commenti.toString());
-        let y = x.commenti.length;
-        return y;
-      }
-    });
-    return [];
   }
 
   addPost(autore:string, testo:string) {
